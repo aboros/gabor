@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "dev": "postcss src/css/main.css -o dist/css/style.css --watch",
+    "build": "postcss src/css/main.css -o dist/css/style.css --minify"
+  }
+} 
