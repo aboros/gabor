@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="bg-light">
     <header>
         <div class="container">
             <div class="logo">
@@ -16,20 +16,49 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#work">Munkáink</a></li>
-                    <li><a href="#testimonials">Vélemények</a></li>
-                    <li><a href="#contact">Kapcsolat</a></li>
+                    <li><a href="#work" class="btn">Munkáink</a></li>
+                    <li><a href="#testimonials" class="btn">Vélemények</a></li>
+                    <li><a href="#contact" class="btn">Kapcsolat</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <div id="overlay" class="overlay"></div>
+    <div id="contact-sidebar" class="off-canvas">
+        <button class="close-btn" onclick="closeContact()">&times;</button>
+        <div class="container">
+            <div class="contact-info-container">
+            <h2>Kérjen ingyenes felmérést!</h2>
+            <p>
+                Nem kispórolt, elgyengített anyagból dolgozunk. Mi csak a legjobb minőséget kínáljuk Önnek!
+            </p>
+            <h2>Kapcsolat</h2>
+            <div class="contact-info">
+                <p>
+                    <a href="tel:+36301234567" class="btn">
+                        +36 30 123 4567
+                    </a>
+                </p>
+                <p><a href="mailto:hunaboros@gmail.com" class="btn">hello@pergola-gyor.hu</a></p>
+            </div>
+            </div>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+    </div>
+
     <main>
-        <section id="about" class="bg-amber">
+        <section id="about">
             <div class="container">
                 <h2>Minden, ami fa! Vagy jót vagy semmit!</h2>
                 <p>
-                    Van egy nagyszerű ötlete, amit szeretne megvalósítani? Mi segítünk Önnek! Cégünk kertépítmények készítésével foglalkozik rövid határidővel és pontos munkavégzéssel. Egyedi méretben és kivitelben kínáljuk szolgáltatásainkat, hogy az Ön elképzelései maradéktalanul megvalósulhassanak.
+                    Van egy nagyszerű ötlete, amit szeretne megvalósítani? Mi segítünk Önnek!
+                </p>
+                <p>
+                    Cégünk kertépítmények készítésével foglalkozik rövid határidővel és pontos munkavégzéssel. Egyedi méretben és kivitelben kínáljuk szolgáltatásainkat, hogy az Ön elképzelései maradéktalanul megvalósulhassanak.
                 </p>
                 <h2>Szolgáltatásaink</h2>
                 <ul class="services-list">
@@ -39,46 +68,30 @@
                     <li><h3>Szaletlik készítése</h3></li>
                     <li><h3>Kerti grillező terasz építése</h3></li>
                 </ul>
-                <h2>Minden munkánkat rövid határidővel és pontosan végezzük.</h2>
-                <h2>CNC megmunkálás</h2>
-                <p>
-                    CNC megmunkálást vállalunk kapott tervek alapján is, számos anyaggal, mint például:
-                </p>
-                <ul class="materials-list">
-                    <li><h3>MDF</h3></li>
-                    <li><h3>HDF</h3></li>
-                    <li><h3>Laminált bútorlap</h3></li>
-                    <li><h3>Forgácslap</h3></li>
-                    <li><h3>Rétegelt lemez</h3></li>
-                    <li><h3>Tömörfa</h3></li>
-                    <li><h3>ABS</h3></li>
-                    <li><h3>Plexi</h3></li>
-                    <li><h3>PVC</h3></li>
-                    <li><h3>PET</h3></li>
-                </ul>
             </div>
         </section>
 
-        <section id="work" class="py-16">
-            <div class="w-full">
-                <h2 class="text-3xl font-bold text-stone-800 mb-6 text-center">Munkáink</h2>
-                <div class="glide work-carousel w-full">
+        <section id="work">
+            <div class="container">
+                <h2>Munkáink</h2>
+            </div>
+                <div class="glide work-carousel">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
                             <li class="glide__slide">
-                                <img src="images/IMG_5226.webp" alt="Custom Kitchen Cabinet" class="w-full h-auto">
+                                <img src="images/IMG_5226.webp" alt="Custom Kitchen Cabinet">
                             </li>
                             <li class="glide__slide">
-                                <img src="images/IMG_5268.webp" alt="Handcrafted Table" class="w-full h-auto">
+                                <img src="images/IMG_5268.webp" alt="Handcrafted Table">
                             </li>
                             <li class="glide__slide">
-                                <img src="images/IMG_5289.webp" alt="Built-in Shelving" class="w-full h-auto">
+                                <img src="images/IMG_5289.webp" alt="Built-in Shelving">
                             </li>
                         </ul>
                     </div>
                     <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left bg-stone-800 text-stone-50" data-glide-dir="<">&#8249;</button>
-                        <button class="glide__arrow glide__arrow--right bg-stone-800 text-stone-50" data-glide-dir=">">&#8250;</button>
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#8249;</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#8250;</button>
                     </div>
                     <div class="glide__bullets" data-glide-el="controls[nav]">
                         <button class="glide__bullet" data-glide-dir="=0"></button>
@@ -86,32 +99,30 @@
                         <button class="glide__bullet" data-glide-dir="=2"></button>
                     </div>
                 </div>
-            </div>
         </section>
-
-        <section id="testimonials" class="py-16 bg-amber-50">
-            <div class="w-full">
-                <h2 class="text-3xl font-bold text-stone-800 mb-6 text-center">Rólunk mondták</h2>
-                <div class="glide testimonial-carousel w-full">
+        <section id="testimonials">
+            <div class="container">
+                <h2>Rólunk mondták</h2>
+                <div class="glide testimonial-carousel p-16">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
                             <li class="glide__slide">
-                                <blockquote class="text-xl italic text-center p-8">
+                                <blockquote>
                                     "Gáborék nagyon precízek és pontosak, tökéletesen megvalósították a terveimet!"
-                                    <cite class="block mt-4 text-stone-700 not-italic">- Szabó Sándor</cite>
+                                    <cite>- Szabó Sándor</cite>
                                 </blockquote>
                             </li>
                             <li class="glide__slide">
-                                <blockquote class="text-xl italic text-center p-8">
+                                <blockquote>
                                     "Igazán profi munkát végeztek és makulátlan rendet hagytak maguk után!"
-                                    <cite class="block mt-4 text-stone-700 not-italic">- Kovács István</cite>
+                                    <cite>- Kovács István</cite>
                                 </blockquote>
                             </li>
                         </ul>
                     </div>
                     <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left bg-stone-800 text-stone-50" data-glide-dir="<">&#8249;</button>
-                        <button class="glide__arrow glide__arrow--right bg-stone-800 text-stone-50" data-glide-dir=">">&#8250;</button>
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#8249;</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#8250;</button>
                     </div>
                     <div class="glide__bullets" data-glide-el="controls[nav]">
                         <button class="glide__bullet" data-glide-dir="=0"></button>
@@ -120,37 +131,43 @@
                 </div>
             </div>
         </section>
-
-        <section id="planning" class="py-16">
-            <div class="w-full text-center">
-                <h2 class="text-3xl font-bold text-stone-800 mb-6">Kérjen ingyenes felmérést!</h2>
-                <p class="text-lg text-stone-700 mb-6">
-                    Nem kispórolt, elgyengített anyagból dolgozunk. Mi csak a legjobb minőséget kínáljuk Önnek!
+        <section>
+            <div class="container">
+                <h2>CNC megmunkálás</h2>
+                <p>
+                    CNC megmunkálást vállalunk kapott tervek alapján is, számos anyaggal, mint például:
                 </p>
+                <ul class="materials-list">
+                    <div class="flex">
+                        <div class="col">
+                            <li><h3>MDF</h3></li>
+                            <li><h3>HDF</h3></li>
+                            <li><h3>Laminált bútorlap</h3></li>
+                            <li><h3>Forgácslap</h3></li>
+                            <li><h3>Rétegelt lemez</h3></li>
+                        </div>
+                        <div class="col">
+                            <li><h3>Tömörfa</h3></li>
+                            <li><h3>ABS</h3></li>
+                            <li><h3>Plexi</h3></li>
+                            <li><h3>PVC</h3></li>
+                            <li><h3>PET</h3></li>
+                        </div>
+                    </div>
+                </ul>
             </div>
         </section>
 
-        
     </main>
 
     <footer>
-        <section id="contact">
-            <div class="container">
-                <h2>Kapcsolat</h2>
-                <div class="contact-info">
-                    <p>
-                        <a href="tel:+36301234567" class="phone-button">
-                            +36 30 123 4567
-                        </a>
-                    </p>
-                    <p><a href="mailto:hunaboros@gmail.com">hello@pergola-gyor.hu</a></p>
-                </div>
-                <div class="social-links">
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                </div>
-            </div>
-        </section>
+        <div class="container">
+            <h2>Kérjen ingyenes felmérést!</h2>
+            <strong>Minden munkánkat rövid határidővel és pontosan végezzük.</strong>
+            <p>
+                <a href="#contact" class="btn">Kapcsolat</a>
+            </p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
@@ -170,6 +187,28 @@
             gap: 0,
             autoplay: 7000
         }).mount();
+
+        // Contact sidebar functionality
+        function openContact(event) {
+            event.preventDefault();
+            document.getElementById('contact-sidebar').classList.add('active');
+            document.getElementById('overlay').classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when sidebar is open
+        }
+
+        function closeContact() {
+            document.getElementById('contact-sidebar').classList.remove('active');
+            document.getElementById('overlay').classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Replace the single event listener with this:
+        document.querySelectorAll('a[href="#contact"]').forEach(link => {
+            link.addEventListener('click', openContact);
+        });
+
+        // Close sidebar when clicking overlay
+        document.getElementById('overlay').addEventListener('click', closeContact);
     </script>
 </body>
 </html> 

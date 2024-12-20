@@ -1,16 +1,78 @@
 :root {
-    --color-stone-800: #292524;
-    --color-stone-700: #44403c;
-    --color-stone-50: #fafaf9;
-    --color-amber-600: #d97706;
-    --color-amber-50: #fffbeb;
+    --color-black: #292524;
+    --color-white: #fafaf9;
+    --color-dark: #44403c;
+    --color-primary: #d97706;
+    --color-light: #fffbeb;
+}
+
+/* Basic utility classes */
+.bg-black {
+    background-color: var(--color-black);
+}
+.bg-white {
+    background-color: var(--color-white);
+}
+.bg-light {
+    background-color: var(--color-light);
+}
+.bg-dark {
+    background-color: var(--color-dark);
+}
+.bg-primary {
+    background-color: var(--color-primary);
+}
+.text-black {
+    color: var(--color-black);
+}
+.text-white {
+    color: var(--color-white);
+}
+.text-light {
+    color: var(--color-light);
+}
+.text-primary {
+    color: var(--color-primary);
+}
+.btn {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background-color: white;
+  color: var(--color-black)
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.col {
+  flex: 1;
 }
 
 body {
     margin: 0;
     font-family: system-ui, -apple-system, sans-serif;
-    color: var(--color-stone-800);
+    color: var(--color-body);
+    font-size: 1.125rem;
     line-height: 1.5;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+h3 {
+  display: inline;
+  font-size: 1.5rem;
+}
+ul {
+  list-style: disc inside;
+  margin-bottom: 1.5rem;
 }
 
 .container {
@@ -21,32 +83,23 @@ body {
 
 /* Header styles */
 header {
-    position: fixed;
-    top: 0;
     width: 100%;
-    background-color: var(--color-stone-50);
+    background-color: var(--color-dark);
+    color: var(--color-light);
     z-index: 50;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 4em 0 1em 0;
+    border-bottom: 3px solid var(--color-primary);
 }
 
 header .container {
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-@media (min-width: 768px) {
-    header .container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
 }
 
 .logo h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin: 0;
 }
 
 nav ul {
@@ -57,78 +110,21 @@ nav ul {
     margin: 1rem 0 0 0;
 }
 
-@media (min-width: 768px) {
-    nav ul {
-        margin: 0;
-    }
-}
-
 nav a {
-    color: var(--color-stone-800);
+    color: var(--color-black);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: var(--color-amber-600);
-}
-
-/* Main content */
-main {
-    margin-top: 6rem;
-}
-
-section {
-    padding: 4rem 0;
-}
-
-.bg-amber {
-    background-color: var(--color-amber-50);
-}
-
-h2 {
-    font-size: 1.875rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.services-list,
-.materials-list {
-    list-style: disc inside;
-    margin-bottom: 1.5rem;
-}
-
-.services-list h3,
-.materials-list h3 {
-    display: inline;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    color: var(--color-primary);
 }
 
 /* Footer styles */
 footer {
-    background-color: var(--color-stone-800);
-    color: var(--color-stone-50);
-    text-align: center;
-    padding: 1rem 0;
-}
-
-.contact-info {
-    margin-bottom: 2rem;
-}
-
-.phone-button {
-    background-color: var(--color-amber-600);
-    color: var(--color-stone-800);
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-.phone-button:hover {
-    background-color: white;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 4rem 0 4rem 0;
 }
 
 .social-links {
@@ -137,27 +133,28 @@ footer {
     gap: 2rem;
 }
 
-.social-links a {
-    color: var(--color-amber-600);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: white;
-}
-
 /* Carousel styles */
+ul.glide__slides,
+li.glide__slide {
+  padding: 0;
+  margin: 0;
+}
+.glide__slide img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
 .glide__arrow {
-    background-color: var(--color-stone-800);
-    color: var(--color-stone-50);
+    background-color: var(--color-dark);
+    color: var(--color-light);
     border: none;
     padding: 1rem;
     cursor: pointer;
 }
 
 .glide__bullet {
-    background-color: var(--color-stone-800);
+    background-color: var(--color-dark);
     width: 10px;
     height: 10px;
     padding: 0;
@@ -168,5 +165,101 @@ footer {
 }
 
 .glide__bullet--active {
-    background-color: var(--color-amber-600);
+    background-color: var(--color-primary);
+}
+.testimonial-carousel .glide__slide {
+  padding: 4rem;
+}
+
+/* Off-canvas styles */
+.off-canvas {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.off-canvas.active {
+    right: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--color-light);
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 1rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    z-index: 1001;
+}
+
+.close-btn:hover {
+    color: var(--color-primary);
+}
+
+/* Adjust contact info styles for sidebar */
+.off-canvas .contact-info {
+    margin: 2rem 0;
+}
+
+.off-canvas .social-links {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+}
+
+.off-canvas .social-links a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.off-canvas .social-links a:hover {
+    color: var(--color-primary);
+}
+
+.off-canvas .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin: 0;
+    padding-bottom: 4rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
