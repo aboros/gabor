@@ -74,6 +74,19 @@ ul {
   list-style: disc inside;
   margin-bottom: 1.5rem;
 }
+blockquote {
+  margin-bottom: 2rem;
+  border-left: 3px solid var(--color-primary);
+  padding: 1rem;
+}
+blockquote p {
+  font-size: 1.125rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+blockquote cite {
+    font-size: 0.8rem;
+}
 
 .container {
     max-width: 1200px;

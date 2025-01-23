@@ -161,31 +161,62 @@
         <section id="testimonials">
             <div class="container">
                 <h2>Rólunk mondták</h2>
-                <div class="glide testimonial-carousel">
-                    <div class="glide__track" data-glide-el="track">
-                        <ul class="glide__slides">
-                            <li class="glide__slide">
-                                <blockquote>
-                                    "Gáborék nagyon precízek és pontosak, tökéletesen megvalósították a terveimet!"
-                                    <cite>- Szabó Sándor</cite>
-                                </blockquote>
-                            </li>
-                            <li class="glide__slide">
-                                <blockquote>
-                                    "Igazán profi munkát végeztek és makulátlan rendet hagytak maguk után!"
-                                    <cite>- Kovács István</cite>
-                                </blockquote>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#8249;</button>
-                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#8250;</button>
-                    </div>
-                    <div class="glide__bullets" data-glide-el="controls[nav]">
-                        <button class="glide__bullet" data-glide-dir="=0"></button>
-                        <button class="glide__bullet" data-glide-dir="=1"></button>
-                    </div>
+                <div class="testimonials-list">
+                    <blockquote>
+                        <p>"Ki is hozzák a megrendeléstől a maximumot. Ezt a hozzászólást úgy írom, hogy mint megrendelő napról napra figyeltem a munkájukat
+                        Nagyon jó csapat! megbízhatóak garantáltan a minőségre törekednek"</p>
+                        <cite>- Tóth László</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>"Nagyon szép munka !!!!"</p>
+                        <cite>- Fülöp Csaba</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>"Ez nagyon szép lett!"</p>
+                        <cite>- Sztanszky Zoltán</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>"Gáborék igazán profik nem csak a munkájukat, hanem a hozzáállásukat tekintve is. Nagyon szépen és gyorsan is dolgoztak és patika rendet hagytak maguk után.<br>
+                        Köszönöm szépen, ezentúl ilyen munkára csak benneteket kereslek!"</p>
+                        <cite>- Boros Ádám</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>"Profi munka volt nalam koszi !!!"</p>
+                        <cite>- Farkas Norbert</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>"Csak ajánlani tudom a csapatot,szakértelem,munkához való pozitív és energikus hozzáállás,időpont utáni pontos és gyors határidőtartás."</p>
+                        <cite>- Kiss Gábor</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>"Nagyon szépen köszönjük a minőségi munkát!<br>
+                        Ritkán találni ilyen profi kivitelezőt!☝️<br>
+                        Boldogok vagyunk, hogy rátok találtunk 🤝<br>
+                        Folytatás következik 😉"</p>
+                        <cite>- Székely Attila</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>"Ritkán látni ilyen ,szép munkát kivitelezéseket, tervek és ötletek szerint is . Igazi Spanyol Madera Pergola stílus <br>
+                        👍"</p>
+                        <cite>- Barkos Zoltán</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>"Csodásak,, kincset érő munkák,,de nem a MAGYAROK,,többségének.
+                        Gratulálok."</p>
+                        <cite>- Spilkáné Katalin</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>"Az ár-érték arány kimagasló, a végeredmény minősége felülmúlta az elvárásainkat. A fa anyaga kiváló, gyönyörűen megmunkált és látszik rajta, hogy hosszú távra tervezett, strapabíró megoldás. A kivitelezés hibátlan: precíz, alapos munka, amit határidőre elvégeztek. Köszönjük ezt a csodálatos pergolát, amely nemcsak praktikus, de esztétikailag is tökéletesen illik a kertünkbe!"</p>
+                        <cite>- Heinczlich Péter</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>"Teljesen elégedettek vagyunk a pergolával! Az ár kiváló, minden forintot megért. A kivitelezés hibátlan, látszik, hogy a szakemberek nagy figyelmet fordítottak a részletekre. A felhasznált fa minősége lenyűgöző, masszív, tartós, és gyönyörűen mutat az udvarunkban. Szívből ajánljuk mindenkinek, aki minőségi munkát és korrekt árakat keres!"</p>
+                        <cite>- Teleki Rita</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>"Érdemes volt kivárni Gáborékat, precíz szép munkát csináltak, jó lett a garázs a terasz is. Ajánlom őket !"</p>
+                        <cite>- Kovacsics Áron és családja</cite>
+                    </blockquote>
                 </div>
             </div>
         </section>
@@ -302,14 +333,6 @@
             perView: 1,
             gap: 0,
             autoplay: 5000
-        }).mount();
-
-        // Initialize testimonials carousel
-        new Glide('.testimonial-carousel', {
-            type: 'carousel',
-            perView: 1,
-            gap: 0,
-            autoplay: 7000
         }).mount();
 
         // Contact sidebar functionality
