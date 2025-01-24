@@ -4,6 +4,7 @@
     --color-dark: #44403c;
     --color-primary: #d97706;
     --color-light: #fffbeb;
+    --breakpoint-lg: 768px;
 }
 
 /* Basic utility classes */
@@ -51,8 +52,24 @@
   flex-direction: row;
   justify-content: space-between;
 }
+.row {
+    width: 100%;
+}
 .col {
   flex: 1;
+}
+.flex-grid {
+    display: block;
+    flex-direction: row;
+}
+@media (min-width: 768px) {
+    .flex-grid {
+        display: flex;
+        margin: 0 -0.25rem;
+    }
+    .flex-grid .col {
+        padding: 0 0.25rem;
+    }
 }
 
 body {
@@ -87,11 +104,15 @@ blockquote p {
 blockquote cite {
     font-size: 0.8rem;
 }
-
+img.img-fluid {
+    width: 100%;
+    height: auto;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+    overflow: hidden;
 }
 
 /* Header styles */
@@ -102,6 +123,9 @@ header {
     z-index: 50;
     padding: 4em 0 1em 0;
     border-bottom: 3px solid var(--color-primary);
+    background-image: url(../images/wood-pattern.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header .container {
@@ -204,13 +228,13 @@ li.glide__slide {
   padding-right: 4rem;
 }
 /* Add media query for larger screens */
-@media (min-width: 768px) {
+@media (min-width: var(--breakpoint-lg)) {
     .off-canvas {
         right: -400px;
         width: 400px;
     }
 }
-@media (min-width: 768px) {
+@media (min-width: var(--breakpoint-lg)) {
   .off-canvas .container {
     padding-left: 2rem;
   }
