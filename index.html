@@ -105,6 +105,7 @@
             }
           }
     </script>
+    <script>window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};</script>
 </head>
 <body class="bg-light">
     <header>
@@ -627,6 +628,57 @@
                     content.style.maxHeight = content.scrollHeight + "px";
                 }
             });
+        });
+
+        // Track accordion interactions
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionItem = button.parentElement;
+                const headerText = button.textContent.trim().split('\n')[0]; // Get header text without the + symbol
+                sa_event(`accordion_click_${headerText.toLowerCase().replace(/\s+/g, '_')}`);
+            });
+        });
+
+        // Track carousel navigation
+        document.querySelectorAll('.glide__arrow').forEach(arrow => {
+            arrow.addEventListener('click', () => {
+                const direction = arrow.classList.contains('glide__arrow--left') ? 'prev' : 'next';
+                sa_event(`carousel_navigation_${direction}`);
+            });
+        });
+
+        document.querySelectorAll('.glide__bullet').forEach((bullet, index) => {
+            bullet.addEventListener('click', () => {
+                sa_event(`carousel_jump_to_slide_${index + 1}`);
+            });
+        });
+
+        // Track contact button clicks
+        document.querySelectorAll('a[href="#contact"]').forEach(link => {
+            link.addEventListener('click', (event) => {
+                sa_event('contact_sidebar_open');
+                openContact(event);
+            });
+        });
+
+        // Track contact sidebar close
+        document.querySelector('.close-btn').addEventListener('click', () => {
+            sa_event('contact_sidebar_close');
+            closeContact();
+        });
+
+        // Track phone and email clicks
+        document.querySelector('a[href^="tel:"]').addEventListener('click', () => {
+            sa_event('phone_click');
+        });
+
+        document.querySelector('a[href^="mailto:"]').addEventListener('click', () => {
+            sa_event('email_click');
+        });
+
+        // Track social media clicks
+        document.querySelector('a[href*="facebook.com"]').addEventListener('click', () => {
+            sa_event('facebook_group_click');
         });
     </script>
     <!-- 100% privacy-first analytics -->
