@@ -1,0 +1,31 @@
+---
+description: Project overview and tech stack for the Pergola static site
+alwaysApply: true
+---
+
+# Pergola Project Overview
+
+## What This Is
+
+A simple static marketing website for **KVTE Kft.**, a Hungarian woodcraft and construction business. Content is in **Hungarian (hu)**. Services include roofing, pergolas, terraces, carports, garden structures, and CNC machining.
+
+## Tech Stack
+
+- **HTML** — Single `index.html`, no templating or build step
+- **CSS** — Vanilla CSS in `css/style.css` with CSS variables, utility classes, and responsive breakpoints
+- **JavaScript** — Inline vanilla JS only; no frameworks or bundler
+- **Glide.js** — Carousel via CDN (`cdn.jsdelivr.net/npm/@glidejs/glide`)
+- **Simple Analytics** — Privacy-first analytics via `scripts.simpleanalyticscdn.com`
+- **Schema.org JSON-LD** — Structured data in `<script type="application/ld+json">` for SEO
+
+## Hosting
+
+- **GitHub Pages** — Site is served as a static site from the repo
+- **Custom domain** — `terasz-teto-minden-ami-fa.hu` (stored in `CNAME`)
+
+## Conventions
+
+- No npm, no build pipeline — keep it a pure static site
+- Use CDNs for third-party JS/CSS; avoid local copies unless needed
+- Images live in `images/`; prefer `.webp` where appropriate
+- Preserve Hungarian content, meta tags, and Schema.org data when editing
