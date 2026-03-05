@@ -100,7 +100,7 @@
 
 ## 8. Update contact info (phone numbers, tagline)
 
-- [ ] Add second phone number (+36 30 4744013) és frissítsd contact blokkot a "KTVE Kft. – Minden, ami fa" tagline-nal.
+- [x] Add second phone number (+36 30 4744013) és frissítsd contact blokkot a "KTVE Kft. – Minden, ami fa" tagline-nal.
 
 **Email:** KAPCSOLAT ÉS REFERENCIÁK (lines 93–97)
 
