@@ -12,7 +12,7 @@
 
 ## 2. Create Hero section with new copy
 
-- [ ] Add a hero section with these texts and CTAs.
+- [x] Add a hero section with these texts and CTAs.
 
 **Email:** HERO SZEKCIÓ (lines 14–23)
 

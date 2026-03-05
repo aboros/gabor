@@ -132,11 +132,13 @@ header .container {
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .logo h1 {
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
 }
 
 nav ul {
@@ -145,6 +147,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 1rem 0 0 0;
+    justify-content: center;
 }
 
 nav a {
@@ -329,6 +332,72 @@ li.glide__slide {
         display: block;
         text-align: center;
     }
+}
+
+/* Hero section */
+.hero {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 3rem 0 4rem 0;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-headline {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+    color: var(--color-light);
+}
+
+.hero-subheadline {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    margin: 0 0 1rem 0;
+    max-width: 48em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-slogan {
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.95;
+    margin: 0 0 2rem 0;
+}
+
+.hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.hero-cta {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.hero-cta:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.hero-cta-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-light);
+    color: var(--color-light);
+}
+
+.hero-cta-secondary:hover {
+    background-color: var(--color-light);
+    color: var(--color-primary);
 }
 
 /* Accordion styles */
