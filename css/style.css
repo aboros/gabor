@@ -161,6 +161,30 @@ nav a:hover {
     color: var(--color-primary);
 }
 
+/* Why us section */
+.why-us-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+@media (min-width: var(--breakpoint-lg)) {
+    .why-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.why-us-item {
+    padding: 1.5rem;
+    background-color: var(--color-white);
+    border-radius: 0.25rem;
+    border-left: 4px solid var(--color-primary);
+}
+.why-us-item h3 {
+    display: block;
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+}
+
 #testimonials {
   border-bottom: 1px dotted var(--color-dark);
 }

@@ -47,7 +47,7 @@
 
 ## 4. Add "Miért minket válasszon" section
 
-- [ ] Add "Miért minket válasszon" szekció ezekkel a pontokkal.
+- [x] Add "Miért minket válasszon" szekció ezekkel a pontokkal.
 
 **Email:** MIÉRT MINKET VÁLASSZON (lines 48–61)
 
