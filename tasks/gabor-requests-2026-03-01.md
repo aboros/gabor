@@ -76,7 +76,7 @@
 
 ## 6. Add Terület section
 
-- [ ] Add Terület szekció ezzel a szöveggel.
+- [x] Add Terület szekció ezzel a szöveggel.
 
 **Email:** TERÜLET (lines 79–81)
 
