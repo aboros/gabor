@@ -2,7 +2,11 @@
 
 ## 1. Add new brown image (barna hely)
 
-- [ ] Add the new "barna hely" image Gabor sends separately and place it where indicated.
+- [ ] Add `images/hero.png` as the hero/header background image.
+
+**Specification:**
+- Use **`images/hero.png`** specifically.
+- The **header** (hero section) and the **new CTA area below it** shall both have this image as background in **cover mode** (`background-size: cover`).
 
 **Email:** *"még egy képet küldök ez ben az e-mailben azt meg külön tedd fel a barna helyet légyszíven"* (lines 1–2)
 
@@ -124,7 +128,7 @@
 
 | # | Task | Email Reference |
 |---|------|-----------------|
-| 1 | Add new brown image | Lines 1–2 |
+| 1 | Add hero.png as header & CTA background (cover mode) | Lines 1–2 |
 | 2 | Create Hero section | Lines 14–23 |
 | 3 | Replace services structure & copy | Lines 27–44 |
 | 4 | Add "Miért minket válasszon" | Lines 48–61 |
