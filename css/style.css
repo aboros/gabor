@@ -161,6 +161,19 @@ nav a:hover {
     color: var(--color-primary);
 }
 
+/* Cégbemutató section (Google/AI friendly) */
+.cegbemutato {
+    background-color: var(--color-white);
+    padding: 2rem 0;
+}
+.cegbemutato p {
+    max-width: 65ch;
+    margin: 0 0 1rem 0;
+}
+.cegbemutato p:last-child {
+    margin-bottom: 0;
+}
+
 /* Why us section */
 .why-us-grid {
     display: grid;

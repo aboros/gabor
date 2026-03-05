@@ -62,7 +62,7 @@
 
 ## 5. Add Google- és AI-keresőbarát cégbemutató
 
-- [ ] Frissítsd meta description-t és OG leírást, add hozzá cégbemutató szekciót erre a szövegre.
+- [x] Frissítsd meta description-t és OG leírást, add hozzá cégbemutató szekciót erre a szövegre.
 
 **Email:** GOOGLE- ÉS AI-KERESŐBARÁT CÉGBEMUTATÓ (lines 65–75)
 
