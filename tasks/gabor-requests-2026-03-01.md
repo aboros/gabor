@@ -2,7 +2,7 @@
 
 ## 1. Add new brown image (barna hely)
 
-- [ ] Add `images/hero.png` as the hero/header background image.
+- [x] Add `images/hero.png` as the hero/header background image.
 
 **Specification:**
 - Use **`images/hero.png`** specifically.
