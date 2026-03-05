@@ -88,7 +88,7 @@
 
 ## 7. Update footer / Záró CTA
 
-- [ ] Cseréld footer fő szövegét erre a záró CTA-ra.
+- [x] Cseréld footer fő szövegét erre a záró CTA-ra.
 
 **Email:** ZÁRÓ CTA (lines 87–90)
 
