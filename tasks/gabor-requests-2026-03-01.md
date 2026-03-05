@@ -116,7 +116,7 @@
 
 ## 9. Verify company name consistency (KVTE vs KTVE)
 
-- [ ] Ellenőrizd a cég nevének helyes alakját (KVTE vagy KTVE) és igazítsd meta, schema.org és contact szövegeket.
+- [x] Ellenőrizd a cég nevének helyes alakját (KVTE vagy KTVE) és igazítsd meta, schema.org és contact szövegeket.
 
 **Email:** "KTVE Kft."
 
