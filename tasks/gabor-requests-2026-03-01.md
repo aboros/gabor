@@ -31,7 +31,7 @@
 
 ## 3. Replace services with new structure and copy
 
-- [ ] Replace services with this new structure and copy.
+- [x] Replace services with this new structure and copy.
 
 **Email:** SZOLGÁLTATÁSAINK (lines 27–44) – új szolgáltatási lista:
 
