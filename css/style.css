@@ -185,7 +185,6 @@ nav a:hover {
 .cegbemutato-card {
     padding: 1.25rem;
     background-color: var(--color-light);
-    border-radius: 0.25rem;
     border-left: 3px solid var(--color-primary);
 }
 .cegbemutato-card p {
@@ -207,6 +206,7 @@ nav a:hover {
 .why-us-item {
     padding: 1rem;
     border-left: 3px solid var(--color-primary);
+    background-color: var(--color-white);
 }
 .why-us-item h3 {
     display: block;
