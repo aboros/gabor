@@ -277,11 +277,27 @@ li.glide__slide {
     background-color: var(--color-primary);
 }
 
+/* Edge-to-edge carousel on small screens; align with .container from tablet up */
+.work-carousel-shell {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@media (min-width: 768px) {
+    .work-carousel-shell {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
 .work-gallery-cta {
     text-align: center;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
-    padding: 0 1rem;
 }
 .work-gallery-cta p {
     margin-bottom: 1rem;
