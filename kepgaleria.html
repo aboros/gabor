@@ -20,10 +20,38 @@
                 <ul>
                     <li><a href="index.html" class="btn">Főoldal</a></li>
                     <li><a href="index.html#work" class="btn">Munkáink</a></li>
+                    <li><a href="#contact" class="btn">Kapcsolat</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="contact-sidebar" class="off-canvas">
+        <button type="button" class="close-btn" aria-label="Bezárás">&times;</button>
+        <div class="container">
+            <div class="contact-info-container">
+                <h2>Kérjen ingyenes felmérést!</h2>
+                <p>
+                    Nem kispórolt, elgyengített anyagból dolgozunk. Mi csak a legjobb minőséget kínáljuk Önnek!
+                </p>
+                <h2>Kapcsolat</h2>
+                <div class="contact-info">
+                    <p class="flex flex-col gap-2">
+                        <p><a href="tel:+36203857502" class="btn">+36 20 385 7502</a></p>
+                        <p><a href="tel:+36304744013" class="btn">+36 30 474 4013</a></p>
+                    </p>
+                    <p class="flex flex-col gap-2"><a href="mailto:ktvekft@gmail.com" class="btn">ktvekft@gmail.com</a></p>
+                    <p class="flex flex-col gap-2"><a href="https://terasz-teto-minden-ami-fa.hu" class="btn">terasz-teto-minden-ami-fa.hu</a></p>
+                </div>
+                <h3>KTVE Kft. – Minden, ami fa</h3>
+                <p>Adószám: 32009541-2-08</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/groups/1094177721085797">Facebook csoportunk</a>
+            </div>
+        </div>
+    </div>
 
     <main class="photo-gallery-page">
         <div class="container">
@@ -39,16 +67,54 @@
         </div>
     </main>
 
+    <div class="gallery-sticky-contact" role="navigation" aria-label="Gyors kapcsolat">
+        <div class="container gallery-sticky-contact-inner">
+            <a href="#contact" class="btn gallery-sticky-contact-btn">Kapcsolat</a>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
             <p>Pergola, terasz, ácsmunka – KTVE Kft.</p>
             <p>
                 <a href="index.html" class="btn">Főoldal</a>
+                <a href="#contact" class="btn">Kapcsolat</a>
             </p>
         </div>
     </footer>
 
     <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <script>
+    function openContact(event) {
+      event.preventDefault();
+      document.getElementById('contact-sidebar').classList.add('active');
+      document.getElementById('overlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeContact() {
+      document.getElementById('contact-sidebar').classList.remove('active');
+      document.getElementById('overlay').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('a[href="#contact"]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        window.sa_event('contact_sidebar_open');
+        openContact(event);
+      });
+    });
+    document.getElementById('overlay').addEventListener('click', closeContact);
+    document.querySelector('#contact-sidebar .close-btn').addEventListener('click', function () {
+      window.sa_event('contact_sidebar_close');
+      closeContact();
+    });
+    document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
+      link.addEventListener('click', function () { window.sa_event('phone_click'); });
+    });
+    var mailEl = document.querySelector('#contact-sidebar a[href^="mailto:"]');
+    if (mailEl) mailEl.addEventListener('click', function () { window.sa_event('email_click'); });
+    var fbEl = document.querySelector('#contact-sidebar a[href*="facebook.com"]');
+    if (fbEl) fbEl.addEventListener('click', function () { window.sa_event('facebook_group_click'); });
+    </script>
     <script>
     (function () {
       var BASE = 'images/gallery/';

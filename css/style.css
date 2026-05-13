@@ -308,7 +308,7 @@ li.glide__slide {
 }
 
 .photo-gallery-page {
-    padding: 2rem 0 3rem;
+    padding: 2rem 0 calc(3rem + 4.75rem + env(safe-area-inset-bottom, 0px));
 }
 .photo-gallery-intro {
     max-width: 42rem;
@@ -350,6 +350,31 @@ li.glide__slide {
 
 .gallery-back-wrap {
     margin-top: 2rem;
+}
+
+.gallery-sticky-contact {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 997;
+    padding: 0.75rem 0 calc(0.75rem + env(safe-area-inset-bottom, 0px));
+    background-color: var(--color-dark);
+    box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.18);
+}
+
+.gallery-sticky-contact-inner {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-sticky-contact-btn {
+    min-width: 14rem;
+    text-align: center;
+}
+
+.gallery-sticky-contact + footer {
+    padding-bottom: calc(4rem + 4.75rem + env(safe-area-inset-bottom, 0px));
 }
 
 .testimonial-carousel .glide__slide {
