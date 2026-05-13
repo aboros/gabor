@@ -314,6 +314,13 @@ li.glide__slide {
     max-width: 42rem;
     margin-bottom: 2rem;
 }
+.photo-gallery-status[hidden] {
+    display: none;
+}
+.photo-gallery-status {
+    max-width: 42rem;
+    margin-bottom: 1rem;
+}
 .photo-gallery-grid {
     display: grid;
     grid-template-columns: 1fr;

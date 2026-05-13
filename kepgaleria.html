@@ -30,17 +30,11 @@
             <div class="photo-gallery-intro">
                 <p>Az alábbi képek kiegészítik a főoldalon látható válogatást. Ide folyamatosan töltjük fel újabb kivitelezéseink fotóit.</p>
             </div>
-            <ul class="photo-gallery-grid">
-                <li><img src="images/teto-3.jpg" alt="Tetőfedés és tetőfelújítás" loading="lazy"></li>
-                <li><img src="images/kiulo-1.jpg" alt="Kerti kiülő" loading="lazy"></li>
-                <li><img src="images/kiulo-2.jpg" alt="Kerti kiülő" loading="lazy"></li>
-                <li><img src="images/szaletli-1.jpg" alt="Szaletli" loading="lazy"></li>
-                <li><img src="images/szaletli-2.jpg" alt="Szaletli" loading="lazy"></li>
-                <li><img src="images/grill-1.jpg" alt="Kerti grillező" loading="lazy"></li>
-                <li><img src="images/grill-2.jpg" alt="Kerti grillező" loading="lazy"></li>
-                <li><img src="images/cnc-1.jpg" alt="CNC megmunkálás" loading="lazy"></li>
-                <li><img src="images/cnc-2.jpg" alt="CNC megmunkálás" loading="lazy"></li>
-            </ul>
+            <noscript>
+                <p class="photo-gallery-status">A galéria betöltéséhez szükség van a JavaScriptre. Kapcsolja be a böngészőben, majd frissítse az oldalt.</p>
+            </noscript>
+            <p id="photo-gallery-status" class="photo-gallery-status" role="status" aria-live="polite"></p>
+            <ul id="photo-gallery-grid" class="photo-gallery-grid"></ul>
             <p class="gallery-back-wrap"><a href="index.html#work" class="btn">← Vissza a főoldali galériához</a></p>
         </div>
     </main>
@@ -55,5 +49,48 @@
     </footer>
 
     <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <script>
+    (function () {
+      var BASE = 'images/gallery/';
+      var statusEl = document.getElementById('photo-gallery-status');
+      var grid = document.getElementById('photo-gallery-grid');
+      if (!grid || !statusEl) return;
+
+      function rejectUnsafeName(name) {
+        if (typeof name !== 'string' || name.length === 0) return true;
+        if (name.indexOf('/') !== -1 || name.indexOf('\\') !== -1) return true;
+        if (name.indexOf('..') !== -1) return true;
+        return false;
+      }
+
+      statusEl.textContent = 'Galéria betöltése…';
+
+      fetch(BASE + 'manifest.json')
+        .then(function (res) {
+          if (!res.ok) throw new Error('manifest');
+          return res.json();
+        })
+        .then(function (files) {
+          if (!Array.isArray(files)) throw new Error('manifest');
+          var frag = document.createDocumentFragment();
+          files.forEach(function (name) {
+            if (rejectUnsafeName(name)) return;
+            var li = document.createElement('li');
+            var img = document.createElement('img');
+            img.src = BASE + encodeURIComponent(name);
+            img.alt = 'Referenciafotó – pergola, teraszfedés és fa kivitelezés (KTVE Kft.)';
+            img.loading = 'lazy';
+            li.appendChild(img);
+            frag.appendChild(li);
+          });
+          grid.appendChild(frag);
+          statusEl.textContent = '';
+          statusEl.setAttribute('hidden', '');
+        })
+        .catch(function () {
+          statusEl.textContent = 'Nem sikerült betölteni a galériát. Frissítse az oldalt, vagy nézzen vissza később.';
+        });
+    })();
+    </script>
 </body>
 </html>
